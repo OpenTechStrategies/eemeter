@@ -1489,7 +1489,7 @@ def test_caltrack_modeled_savings_empty_temperature_data(
 ):
 
     index = pd.DatetimeIndex([], freq='H')
-    temperature_data = pd.Series([], index=index).tz_localize('UTC')
+    temperature_data = pd.Series([], index=index)
 
     meter_data_index = temperature_data.resample('D').sum().index
 
